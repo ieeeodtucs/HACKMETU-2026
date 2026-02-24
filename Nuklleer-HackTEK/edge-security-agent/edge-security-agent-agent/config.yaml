@@ -1,0 +1,31 @@
+# HackTEK Agent İstemci Ayar Dosyası
+
+# Sunucu Bağlantı Ayarları
+server_url: "http://10.145.251.49:8000/api/telemetry"
+kontrol_periyodu: 0.5
+batch_limit: 10
+
+# Sistem Kritik Eşik Değerleri (Yüzde olarak)
+thresholds:
+  cpu: 85.0
+  ram: 80.0
+
+# Mesai Saatleri (Bu saatler dışındaki açılışlar risk sayılır)
+working_hours:
+  start: 8
+  end: 22
+
+# SOAR (Otomatik Yanıt) Risk Sınırları
+risk_limits:
+  A: 90  # Ajanı tamamen kapatacak FATAL risk skoru
+  B: 70  # Büyük uyarı gönderecek ALARM risk skoru
+
+# Güvenlik Beyaz Listesi (İzin verilen cihaz ve portlar)
+whitelist:
+  usb:
+    - "058f:6387"
+  ports:
+    - 22
+    - 80
+    - 443
+    - 631

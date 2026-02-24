@@ -1,0 +1,5 @@
+fastapi>=0.100.0
+uvicorn>=0.23.0
+customtkinter>=5.2.0
+requests>=2.31.0
+aiosqlite>=0.19.0
