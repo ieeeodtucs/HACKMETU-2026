@@ -1,0 +1,67 @@
+@hostname = localhost
+
+@port = 8080
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+@token = eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoYXNhbi5rYXJhIiwiaWF0IjoxNjU0MTc5NjcwLCJleHAiOjE2NTUwNDM2NzB9.B4bofoP4tkNDKI9Wbk1EIgRDeYCyED6J1K4aN46qWwUXNLe87wvqU-kNAXE1ZLr8tfNKLsqqW8WJirZBiYzONw
+POST http://{{host}}/api/auth/signin
+Content-Type: {{contentType}}
+
+{
+    "username": "hasan.kara",
+    "password": "123"
+}
+
+### Test Not Secured Service
+POST http://{{host}}/test/hello
+
+### Test Secured Service
+POST http://{{host}}/test/secured
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+
+### Test Registration Template CREATE
+POST http://{{host}}/api/registration-templates/
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+{
+    "id": 3321,
+    "unitId": "unitId1",
+    "authGroup": "authGroup1",
+    "parentDn": "parentDn1",
+    "templateType": "HOSTNAME"
+
+}
+
+### Test Registration Template Get By ID
+GET http://{{host}}/api/registration-templates/23321321
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+
+### Test Registration Template Get By Type
+GET http://{{host}}/api/registration-templates/type/HOSTNAME/page-count/1/page-size/100
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+### Registration Template EDIT
+PUT http://{{host}}/api/registration-templates/
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+{
+    "id": 5431699,
+    "unitId": "unitId11",
+    "authGroup": "authGroup11",
+    "parentDn": "parentDn11",
+    "templateType": "HOSTNAME"
+
+}
+
+### Registration Template EDIT
+DELETE http://{{host}}/api/registration-templates/5431699
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}

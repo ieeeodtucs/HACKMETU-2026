@@ -1,0 +1,18 @@
+services:
+  apprise:
+    image: caronc/apprise:latest
+    container_name: apprise
+    ports:
+      - "#APPRISE_PORT:8000"
+    environment:
+      APPRISE_STATEFUL_MODE: simple
+      APPRISE_WORKER_COUNT: 1
+      APPRISE_ADMIN: "y"
+    volumes:
+      - apprise_config:/config
+      - apprise_attach:/attach
+    restart: unless-stopped
+
+volumes:
+  apprise_config:
+  apprise_attach:
