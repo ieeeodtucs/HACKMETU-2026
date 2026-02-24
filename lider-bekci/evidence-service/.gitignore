@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Runtime database & logs
+*.db
+*.log
+
+# OS
+.DS_Store
