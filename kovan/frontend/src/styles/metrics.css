@@ -1,0 +1,124 @@
+/* ═══ Real-time System Metrics KPI ═══ */
+
+.metrics-kpi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+.metrics-kpi > .metrics-card {
+  flex: 1 1 200px;
+  max-width: 320px;
+}
+
+.metrics-kpi-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 24px;
+  color: var(--tx-3);
+  font-size: 13px;
+}
+
+.metrics-card {
+  background: var(--bg-0);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.metrics-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 12px rgba(255, 203, 8, 0.08);
+}
+
+.metrics-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.metrics-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--bg-1);
+  flex-shrink: 0;
+}
+
+.metrics-card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.metrics-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--tx-3);
+}
+
+.metrics-card-value {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.metrics-card-sub {
+  font-size: 11px;
+  color: var(--tx-3);
+  font-variant-numeric: tabular-nums;
+  padding-top: 2px;
+  border-top: 1px solid var(--bg-2);
+}
+
+.metrics-sparkline {
+  width: 100%;
+  height: 32px;
+  display: block;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.metrics-gauge {
+  flex-shrink: 0;
+}
+
+/* Uptime card: simpler layout */
+.metrics-card-uptime .metrics-card-value {
+  font-size: 17px;
+}
+
+/* ═══ Dark mode ═══ */
+[data-theme="dark"] .metrics-card {
+  background: var(--bg-2);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .metrics-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 16px rgba(255, 203, 8, 0.06);
+}
+
+[data-theme="dark"] .metrics-card-icon {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .metrics-card-sub {
+  border-top-color: rgba(255, 255, 255, 0.06);
+}

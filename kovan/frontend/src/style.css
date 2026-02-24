@@ -1,0 +1,21 @@
+/* Kovan — Split CSS Entry Point */
+@import './styles/base.css';
+@import './styles/header.css';
+@import './styles/sidebar.css';
+@import './styles/terminal.css';
+@import './styles/machine-control.css';
+@import './styles/dashboard.css';
+@import './styles/auth.css';
+@import './styles/landing.css';
+@import './styles/admin.css';
+@import './styles/vuln-scan.css';
+@import './styles/network-scan.css';
+@import './styles/slide-drawer.css';
+@import './styles/file-manager.css';
+@import './styles/metrics.css';
+@import './styles/action-modal.css';
+@import './styles/screen-viewer.css';
+@import './styles/keylogger.css';
+@import './styles/schedules.css';
+@import './styles/map.css';
+@import './styles/interactive-terminal.css';

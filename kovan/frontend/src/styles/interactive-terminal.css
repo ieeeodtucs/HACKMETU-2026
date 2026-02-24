@@ -1,0 +1,324 @@
+/* ═══════════════════════════════════════════════════
+   INTERACTIVE TERMINAL (xterm.js PTY)
+   ═══════════════════════════════════════════════════ */
+
+.iterm-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+/* ─── Toolbar ─── */
+
+.iterm-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.iterm-toolbar .vuln-scan-btn {
+  gap: 5px;
+}
+
+.iterm-start-btn {
+  border-color: rgba(0, 230, 118, 0.3) !important;
+  background: rgba(0, 230, 118, 0.08) !important;
+  color: #00e676 !important;
+}
+.iterm-start-btn:hover:not(:disabled) {
+  background: rgba(0, 230, 118, 0.15) !important;
+}
+
+.iterm-stop-btn {
+  border-color: rgba(220, 38, 38, 0.3) !important;
+  background: rgba(220, 38, 38, 0.08) !important;
+  color: #ef5350 !important;
+}
+.iterm-stop-btn:hover:not(:disabled) {
+  background: rgba(220, 38, 38, 0.15) !important;
+}
+
+.iterm-toolbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iterm-shell-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+}
+
+.iterm-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.iterm-status-badge.live { color: #00e676; }
+.iterm-status-badge.connecting { color: #ffcb08; }
+.iterm-status-badge.off { color: rgba(255, 255, 255, 0.3); }
+
+.iterm-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.iterm-status-badge.live .iterm-status-dot {
+  animation: iterm-pulse 1.5s ease-in-out infinite;
+}
+
+.iterm-status-badge.connecting .iterm-status-dot {
+  animation: iterm-pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes iterm-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ─── Viewer area ─── */
+
+.iterm-viewer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0a0a0f;
+  position: relative;
+  min-height: 0;
+}
+
+/* ─── Idle empty state ─── */
+
+.iterm-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 48px 24px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.iterm-empty-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  transform: translate(-50%, -55%);
+  background: radial-gradient(circle, rgba(0, 230, 118, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.iterm-empty-icon-wrap {
+  position: relative;
+  z-index: 1;
+  color: rgba(0, 230, 118, 0.35);
+}
+
+.iterm-empty-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: -0.01em;
+}
+
+.iterm-empty-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  max-width: 340px;
+  line-height: 1.6;
+}
+
+.iterm-empty-desc code {
+  background: rgba(255, 203, 8, 0.08);
+  color: rgba(255, 203, 8, 0.8);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', 'Cascadia Code', monospace;
+  border: 1px solid rgba(255, 203, 8, 0.1);
+}
+
+/* Hero start button */
+.iterm-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 24px;
+  margin-top: 4px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgba(0, 230, 118, 0.1);
+  color: #00e676;
+  border: 1px solid rgba(0, 230, 118, 0.25);
+}
+
+.iterm-hero-btn:hover:not(:disabled) {
+  background: rgba(0, 230, 118, 0.18);
+  border-color: rgba(0, 230, 118, 0.45);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0, 230, 118, 0.12);
+}
+
+.iterm-hero-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.iterm-hero-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.iterm-offline-hint {
+  font-size: 11px;
+  color: rgba(255, 82, 82, 0.5);
+  margin-top: -4px;
+}
+
+/* Feature chips */
+.iterm-features {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.iterm-feature {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.iterm-feature-icon {
+  font-size: 11px;
+}
+
+/* ─── Connecting state ─── */
+
+.iterm-connecting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 60px 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.iterm-connecting svg { opacity: 0.3; }
+.iterm-connecting span { font-size: 13px; }
+.iterm-connecting-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* ─── Error state ─── */
+
+.iterm-error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 60px 20px;
+  text-align: center;
+  color: #ff5252;
+}
+
+.iterm-error-state span { font-size: 13px; }
+.iterm-error-sub {
+  font-size: 11px;
+  color: rgba(255, 82, 82, 0.45);
+  max-width: 340px;
+}
+
+/* ─── xterm.js surface ─── */
+
+.iterm-surface {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background: #0a0a0f;
+}
+
+.iterm-surface.visible {
+  display: block;
+}
+
+.iterm-surface .xterm {
+  height: 100%;
+  padding: 6px 10px;
+}
+
+.iterm-surface .xterm-viewport {
+  background: #0a0a0f !important;
+}
+
+.iterm-surface .xterm-viewport::-webkit-scrollbar {
+  width: 6px;
+}
+.iterm-surface .xterm-viewport::-webkit-scrollbar-track {
+  background: transparent;
+}
+.iterm-surface .xterm-viewport::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+.iterm-surface .xterm-viewport::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ─── Trigger button in control panel ─── */
+
+.mc-scan-trigger.terminal-trigger {
+  border-color: rgba(0, 230, 118, 0.15);
+}
+.mc-scan-trigger.terminal-trigger:hover:not(:disabled) {
+  border-color: rgba(0, 230, 118, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 230, 118, 0.08);
+}
+.mc-scan-trigger.terminal-trigger .mc-scan-trigger-icon {
+  color: #00e676;
+  background: rgba(0, 230, 118, 0.06);
+  border: 1px solid rgba(0, 230, 118, 0.15);
+}

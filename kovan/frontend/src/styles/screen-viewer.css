@@ -1,0 +1,131 @@
+/* ===== Screen Streaming Viewer ===== */
+
+.screen-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+}
+
+.screen-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.screen-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.screen-status-badge.live {
+  color: #00e676;
+}
+
+.screen-status-badge.stopped {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.screen-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.screen-status-badge.live .screen-status-dot {
+  animation: screen-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes screen-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Viewer area */
+.screen-viewer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+  min-height: 0;
+}
+
+/* Empty / connecting states */
+.screen-empty,
+.screen-connecting,
+.screen-error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 60px 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.screen-empty svg,
+.screen-connecting svg {
+  opacity: 0.3;
+}
+
+.screen-empty span,
+.screen-connecting span {
+  font-size: 13px;
+}
+
+.screen-empty-sub,
+.screen-connecting-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+  max-width: 360px;
+}
+
+.screen-error-state {
+  color: #ff5252;
+}
+
+.screen-error-state span {
+  font-size: 13px;
+}
+
+/* Fullscreen button */
+.screen-fullscreen-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 6px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 5;
+}
+
+.screen-viewer:hover .screen-fullscreen-btn {
+  opacity: 1;
+}
+
+.screen-fullscreen-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+/* Screen trigger button color */
+.screen-trigger .mc-scan-trigger-icon {
+  color: #00e676;
+}

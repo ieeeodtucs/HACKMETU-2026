@@ -1,0 +1,83 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# ─── Virtual Environment ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ─── ML Model Dosyalari ──────────────────────────────────────────────────────
+# Egitilmis modeller (buyuk dosyalar, her makinede yeniden egitilir)
+models/saved/*.pkl
+models/saved/*.pt
+models/saved/*.pth
+models/saved/*.joblib
+models/saved/*.h5
+
+# ─── Veri Setleri ────────────────────────────────────────────────────────────
+# Ham ve islenmis veri (kagglehub ile indirilir)
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.feather
+*.hdf5
+
+# ─── IDE / Editor ────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ─── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─── Jupyter Notebook ────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─── Environment / Secrets ───────────────────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+docker-data/
+postgres-data/
+timescaledb-data/
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── Test / Coverage ─────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ─── Misc ────────────────────────────────────────────────────────────────────
+*.bak
+*.tmp
+*.temp
+.cache/

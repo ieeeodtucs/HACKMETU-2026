@@ -1,0 +1,748 @@
+/* ═══ Landing Page — Pardus-inspired ═══ */
+
+.landing {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  background: #fafbff;
+  color: #231f20;
+  overflow-x: hidden;
+  font-family: var(--font);
+}
+
+.landing *:target {
+  scroll-margin-top: 80px;
+}
+
+/* ── Nav ── */
+.landing-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 72px;
+  background: rgba(35, 31, 32, 0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 203, 8, 0.1);
+}
+
+.landing-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.landing-nav-brand img {
+  height: 36px;
+}
+
+.landing-nav-brand span {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.landing-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-nav-link {
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.landing-nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.landing-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 28px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  background: var(--accent);
+  color: #231f20;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.landing-nav-cta:hover {
+  background: #ffe066;
+  transform: translateY(-1px);
+}
+
+/* ── Hero ── */
+.landing-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 120px 48px 80px;
+  text-align: center;
+  background: #231f20;
+  overflow: hidden;
+}
+
+.landing-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Flowing abstract curves — layered SVG-like shapes */
+.landing-hero-bg::before {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 120%;
+  height: 90%;
+  background:
+    /* Sweeping golden arcs */
+    radial-gradient(ellipse 90% 60% at 20% 80%, rgba(255, 203, 8, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 50% at 80% 70%, rgba(255, 203, 8, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 80% at 50% 90%, rgba(255, 203, 8, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.landing-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Layered flowing wave shapes via SVG background */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900'%3E%3Cpath d='M-100 700 C200 500 400 650 700 550 C1000 450 1200 600 1540 500' fill='none' stroke='rgba(255,203,8,0.07)' stroke-width='2'/%3E%3Cpath d='M-100 720 C250 520 450 680 750 570 C1050 460 1250 620 1540 530' fill='none' stroke='rgba(255,203,8,0.05)' stroke-width='1.5'/%3E%3Cpath d='M-100 740 C300 540 500 710 800 590 C1100 470 1300 640 1540 560' fill='none' stroke='rgba(255,203,8,0.04)' stroke-width='1'/%3E%3Cpath d='M-100 600 C150 400 350 550 650 450 C950 350 1150 500 1540 400' fill='none' stroke='rgba(255,203,8,0.06)' stroke-width='2'/%3E%3Cpath d='M-100 620 C200 420 400 580 700 470 C1000 360 1200 520 1540 430' fill='none' stroke='rgba(255,203,8,0.04)' stroke-width='1.5'/%3E%3Cpath d='M-100 500 C100 300 350 450 600 380 C850 310 1100 420 1540 330' fill='none' stroke='rgba(255,203,8,0.05)' stroke-width='1.5'/%3E%3Cpath d='M-100 520 C150 320 400 480 650 400 C900 320 1150 440 1540 360' fill='none' stroke='rgba(255,203,8,0.03)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Ambient glow spots */
+.landing-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle 500px at 25% 60%, rgba(255, 203, 8, 0.05) 0%, transparent 100%),
+    radial-gradient(circle 350px at 75% 40%, rgba(255, 203, 8, 0.03) 0%, transparent 100%),
+    radial-gradient(circle 250px at 50% 80%, rgba(255, 203, 8, 0.04) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.landing-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+}
+
+.landing-hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: #fff;
+  margin-bottom: 24px;
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.landing-hero h1 .accent {
+  color: var(--accent);
+}
+
+.landing-hero-sub {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 600px;
+  margin: 0 auto 48px;
+  animation: fadeUp 0.8s ease-out 0.15s both;
+}
+
+/* Outline button (Pardus "Sürümleri İnceleyin" style) */
+.landing-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: #fff;
+  transition: border-color 0.25s, background-color 0.25s, transform 0.25s;
+  animation: fadeUp 0.8s ease-out 0.3s both;
+}
+
+.landing-btn-outline:hover {
+  border-color: var(--accent);
+  background: rgba(255, 203, 8, 0.08);
+  transform: translateY(-2px);
+}
+
+.landing-btn-outline--dark {
+  border-color: rgba(35, 31, 32, 0.2);
+  color: #231f20;
+  animation: none;
+}
+
+.landing-btn-outline--dark:hover {
+  border-color: var(--accent);
+  background: rgba(255, 203, 8, 0.08);
+  color: #231f20;
+}
+
+/* Solid yellow button */
+.landing-btn-solid {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  background: var(--accent);
+  color: #231f20;
+  transition: background-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.landing-btn-solid:hover {
+  background: #ffe066;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 203, 8, 0.25);
+}
+
+/* ── Pill badges (Pardus section labels) ── */
+.landing-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: #fff5cd;
+  border: 1px solid rgba(255, 203, 8, 0.3);
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #231f20;
+  margin-bottom: 20px;
+}
+
+.landing-pill--glass {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+/* ── Bento Stats ── */
+.landing-bento {
+  padding: 100px 48px;
+  background: #fafbff;
+}
+
+.landing-bento-header {
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+
+.landing-bento-header h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #231f20;
+}
+
+.landing-bento-header h2 .accent {
+  color: var(--accent);
+}
+
+.landing-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+}
+
+.landing-bento-card {
+  position: relative;
+  padding: 32px 28px;
+  background: #fff;
+  border: 1px solid rgba(35, 31, 32, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.landing-bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.landing-bento-card h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: #231f20;
+}
+
+.landing-bento-card p {
+  font-size: 13px;
+  color: rgba(35, 31, 32, 0.5);
+}
+
+/* Yellow card */
+.landing-bento-card--yellow {
+  background: var(--accent);
+  border-color: transparent;
+}
+
+.landing-bento-card--yellow h3 { color: #231f20; }
+.landing-bento-card--yellow p { color: rgba(35, 31, 32, 0.7); }
+
+.landing-bento-card--yellow .landing-bento-icon {
+  background: #fff;
+  color: var(--accent);
+}
+
+/* Dark card */
+.landing-bento-card--dark {
+  background: #1a1a1e;
+  border-color: transparent;
+}
+
+.landing-bento-card--dark h3 { color: #fff; }
+.landing-bento-card--dark p { color: rgba(255, 255, 255, 0.5); }
+
+/* Accent card (dark with yellow border) */
+.landing-bento-card--accent {
+  background: #1a1a1e;
+  border: 2px solid var(--accent);
+}
+
+.landing-bento-card--accent h3 { color: var(--accent); }
+.landing-bento-card--accent p { color: rgba(255, 255, 255, 0.5); }
+
+.landing-bento-card--accent .landing-bento-icon {
+  background: rgba(255, 203, 8, 0.15);
+  color: var(--accent);
+}
+
+/* Wide card (spans 2 cols) */
+.landing-bento-card--wide {
+  grid-column: span 1;
+}
+
+/* Wide mid card (spans 2 cols in second row) */
+.landing-bento-card--wide-mid {
+  grid-column: span 2;
+}
+
+/* Bento icon */
+.landing-bento-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  background: rgba(255, 203, 8, 0.12);
+  color: var(--accent);
+}
+
+.landing-bento-icon--ring {
+  background: transparent;
+  border: 2px solid rgba(255, 203, 8, 0.3);
+  color: #fff;
+}
+
+.landing-bento-icon--yellow {
+  background: rgba(255, 203, 8, 0.15);
+  color: var(--accent);
+}
+
+.landing-bento-detail {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(35, 31, 32, 0.4);
+}
+
+.landing-bento-text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #231f20;
+  margin-top: 16px;
+}
+
+.landing-bento-text .accent {
+  color: var(--accent);
+}
+
+/* Large headline text for wide dark card */
+.landing-bento-card .landing-bento-headline {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 16px;
+}
+
+/* ── Features ── */
+.landing-features {
+  padding: 100px 48px;
+  background: #fafbff;
+  text-align: center;
+}
+
+.landing-features h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  color: #231f20;
+  margin-bottom: 12px;
+}
+
+.landing-features h2 .accent {
+  color: var(--accent);
+}
+
+.landing-features-sub {
+  font-size: 15px;
+  color: rgba(35, 31, 32, 0.5);
+  margin-bottom: 56px;
+}
+
+.landing-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto 48px;
+  text-align: left;
+}
+
+.landing-feature-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(35, 31, 32, 0.07);
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.landing-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+.landing-feature-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+  color: var(--accent);
+  border-bottom: 1px solid rgba(35, 31, 32, 0.05);
+}
+
+.landing-feature-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #231f20;
+  padding: 20px 24px 8px;
+}
+
+.landing-feature-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(35, 31, 32, 0.5);
+  padding: 0 24px 20px;
+}
+
+.landing-feature-tag {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(255, 203, 8, 0.1);
+}
+
+/* ── Products / Architecture (Dark gold section like Pardus) ── */
+.landing-products {
+  position: relative;
+  padding: 100px 48px;
+  text-align: center;
+  background: #231f20;
+  overflow: hidden;
+}
+
+/* Gold concentric circles background like Pardus */
+.landing-products::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(circle, transparent 30%, rgba(255, 203, 8, 0.03) 31%, transparent 32%),
+    radial-gradient(circle, transparent 45%, rgba(255, 203, 8, 0.025) 46%, transparent 47%),
+    radial-gradient(circle, transparent 60%, rgba(255, 203, 8, 0.02) 61%, transparent 62%),
+    radial-gradient(circle, transparent 75%, rgba(255, 203, 8, 0.015) 76%, transparent 77%),
+    radial-gradient(circle, transparent 90%, rgba(255, 203, 8, 0.01) 91%, transparent 92%);
+  pointer-events: none;
+}
+
+.landing-products h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.landing-products-sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 56px;
+  position: relative;
+}
+
+.landing-products-grid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.landing-product-card {
+  flex: 0 1 200px;
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  text-align: center;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.landing-product-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 203, 8, 0.3);
+  transform: translateY(-4px);
+}
+
+.landing-product-card svg {
+  margin-bottom: 16px;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+.landing-product-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.landing-product-card p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── CTA ── */
+.landing-cta {
+  padding: 100px 48px;
+  text-align: center;
+  background: #fafbff;
+}
+
+.landing-cta h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  color: #231f20;
+  margin-bottom: 12px;
+}
+
+.landing-cta > p {
+  font-size: 15px;
+  color: rgba(35, 31, 32, 0.5);
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* ── Footer (Pardus-style multi-column dark footer) ── */
+.landing-footer {
+  background: #1a1a1e;
+  padding: 64px 48px 32px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.landing-footer-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.landing-footer-col h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.landing-footer-col a {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.landing-footer-col a:hover {
+  color: var(--accent);
+}
+
+.landing-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 12px;
+}
+
+.landing-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-footer-brand img {
+  height: 20px;
+  opacity: 0.5;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .landing-hero-bg::before { animation: none; }
+  .landing-hero h1,
+  .landing-hero-sub,
+  .landing-btn-outline { animation: none; }
+  .landing-feature-card,
+  .landing-bento-card,
+  .landing-product-card { transition: none; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .landing-features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .landing-nav { padding: 0 20px; }
+  .landing-nav-links { gap: 4px; }
+  .landing-nav-link { padding: 6px 12px; font-size: 12px; }
+  .landing-nav-cta { padding: 8px 20px; font-size: 12px; }
+
+  .landing-hero { padding: 100px 20px 60px; }
+
+  .landing-bento { padding: 60px 20px; }
+  .landing-bento-grid { grid-template-columns: 1fr; }
+  .landing-bento-card--wide,
+  .landing-bento-card--wide-mid { grid-column: span 1; }
+
+  .landing-features { padding: 60px 20px; }
+  .landing-features-grid { grid-template-columns: 1fr; }
+
+  .landing-products { padding: 60px 20px; }
+  .landing-products-grid { flex-direction: column; align-items: center; }
+  .landing-product-card { flex: 0 1 auto; width: 100%; max-width: 300px; }
+
+  .landing-cta { padding: 60px 20px; }
+  .landing-cta-actions { flex-direction: column; }
+
+  .landing-footer { padding: 40px 20px 24px; }
+  .landing-footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .landing-footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+
+/* Touch */
+.landing-btn-outline,
+.landing-btn-solid,
+.landing-nav-link,
+.landing-nav-cta {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.landing-btn-outline:focus-visible,
+.landing-btn-solid:focus-visible,
+.landing-nav-link:focus-visible,
+.landing-nav-cta:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

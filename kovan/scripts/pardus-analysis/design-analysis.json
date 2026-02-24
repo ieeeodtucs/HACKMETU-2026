@@ -1,0 +1,452 @@
+{
+  "body": {
+    "fontFamily": "Inter, sans-serif",
+    "fontSize": "14px",
+    "color": "rgba(35, 31, 32, 0.5)",
+    "background": "rgb(255, 255, 255)"
+  },
+  "fonts": [
+    "\"Times New Roman\"",
+    "Inter, sans-serif",
+    "FontAwesome",
+    "Inter"
+  ],
+  "colors": [
+    "rgb(0, 0, 0)",
+    "rgba(35, 31, 32, 0.5)",
+    "rgb(255, 203, 8)",
+    "rgb(255, 255, 255)",
+    "rgb(35, 31, 32)",
+    "rgba(255, 255, 255, 0)",
+    "rgba(250, 251, 255, 0.5)",
+    "rgba(35, 31, 32, 0.8)",
+    "rgb(145, 143, 143)",
+    "rgb(250, 251, 255)",
+    "rgba(0, 0, 0, 0.5)",
+    "rgb(236, 236, 236)",
+    "rgb(68, 68, 68)",
+    "rgba(255, 255, 255, 0.5)",
+    "rgb(39, 39, 39)",
+    "rgb(51, 51, 51)"
+  ],
+  "bgColors": [
+    "rgb(255, 255, 255)",
+    "rgb(250, 251, 255)",
+    "rgb(255, 245, 205)",
+    "rgb(255, 203, 8)",
+    "rgb(35, 31, 32)",
+    "rgba(255, 255, 255, 0)",
+    "rgba(255, 245, 205, 0.6)",
+    "rgb(65, 65, 65)",
+    "rgba(35, 31, 32, 0.75)",
+    "rgba(145, 143, 143, 0.25)",
+    "rgb(15, 18, 22)",
+    "rgb(21, 26, 31)",
+    "rgb(249, 249, 249)",
+    "rgba(0, 0, 0, 0.75)",
+    "rgba(0, 0, 0, 0.25)",
+    "rgba(0, 0, 0, 0.88)"
+  ],
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Teknolojiyi  ÖzgürleştirinPardus ile Geleceğe Adım Atın",
+      "fontSize": "48px",
+      "fontWeight": "600",
+      "fontFamily": "Inter",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "H1",
+      "text": "Pardus ile bilgisayarınıza hükmedin, Özgürlüğün gücünü hissedin!",
+      "fontSize": "48px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Pardus yüksek performanslı,hızlı ve akıcı bir çalışma deneyimi sunar.",
+      "fontSize": "24px",
+      "fontWeight": "500",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Pardus yaygın virüslerden etkilenmez güvenilir bir çözümdür.",
+      "fontSize": "24px",
+      "fontWeight": "500",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "tag": "H1",
+      "text": "Pardus'ta neler oluyor?",
+      "fontSize": "48px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Mustafa Akgül Özgür Yazılım 2026 Kış Kampı Tamamlandı",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Nesibe Aydın Okulları’nda Pardus ve ETAP Dönemi Başladı",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Sağlıkta Açık Kaynak Hamlesi: Pardus Dönüşümü Hızlanıyor",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Pardus 25 BİLGE Yayımlandı",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Ordu Bilişim Teknolojileri İl Koordinatörü Ömer Çağdaş ATASU",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Bolu Orhangazi Ortaokulu Bilişim Teknolojileri Rehber Öğretmeni Tarık OTU",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Tekirdağ Süleymanpaşa İlçe Milli Eğitim Müdürü Ebubekir Atilla",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Fatih Projesi Eğitmeni Kasım Uysal",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Pardus 25 BİLGE Yayımlandı",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Pardus 25.0 Beta Sürümü Yayımlandı!",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Pardus 17 ve Pardus 19 Sürümleri İçin Depo Güncellemesi Hakkında",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Pardus 23 için Yeni Güncellemeler Yayımlandı",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Mustafa Akgül Özgür Yazılım 2026 Kış Kampı Tamamlandı",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Nesibe Aydın Okulları’nda Pardus ve ETAP Dönemi Başladı",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Sağlıkta Açık Kaynak Hamlesi: Pardus Dönüşümü Hızlanıyor",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H3",
+      "text": "Sağlık Bakanı Sayın Kemal Memişoğlu Pardus Ekibini Makamında Kabul Etti",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H1",
+      "text": "Güçlü ve Esnek Çözümler",
+      "fontSize": "48px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H1",
+      "text": "Pardus Kullanıcıları Ne Diyor?",
+      "fontSize": "48px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    },
+    {
+      "tag": "H1",
+      "text": "Pardus Dünyasına Adım Atın!",
+      "fontSize": "48px",
+      "fontWeight": "600",
+      "fontFamily": "Inter, sans-serif",
+      "color": "rgb(35, 31, 32)"
+    }
+  ],
+  "stylesheets": [
+    "https://pardus.org.tr/wp-content/litespeed/css/c30aed8c90cbf33d1091940b77e4e3ae.css?ver=741d3",
+    "https://pardus.org.tr/wp-content/litespeed/css/642310d4e53837724d5d1444286cfbb5.css?ver=22ca2",
+    "https://pardus.org.tr/wp-content/litespeed/css/7be073380d14111ea034ecd9dd26fc51.css?ver=e88c4",
+    "https://pardus.org.tr/wp-content/litespeed/css/e25c0b61b79310ca8dec47ccdbc4400c.css?ver=793a5",
+    "https://pardus.org.tr/wp-content/litespeed/css/16d091ce1a20ad48a495fa978e7b01e7.css?ver=f8da4",
+    "https://pardus.org.tr/wp-content/litespeed/css/6a048d821866cdc36069ea40c942d07d.css?ver=48db7",
+    "https://pardus.org.tr/wp-content/litespeed/css/fcfdaa63051250c30426d0a24bbdff83.css?ver=f0b24",
+    "https://pardus.org.tr/wp-content/litespeed/css/7cdab86e02be9b9d42650d98309248b2.css?ver=de915",
+    "https://pardus.org.tr/wp-content/litespeed/css/c6d64d9fbfa16ddc7e8b0e57896a6560.css?ver=69b3a",
+    "https://pardus.org.tr/wp-content/litespeed/css/2d1d3d09c6e6b07289eb1808dc876109.css?ver=215f0",
+    "https://pardus.org.tr/wp-content/litespeed/css/49afe5b2cbdd852f057b1a516c37f383.css?ver=0911d",
+    "https://pardus.org.tr/wp-content/litespeed/css/03071a99a6511b5eea0d9017352cecdb.css?ver=39602",
+    "https://fonts.googleapis.com/css?family=Inter:300,400%7CInter:400,400i,700,700i,500,500i,600,600i&subset=latin,latin-ext&display=swap",
+    "https://fonts.googleapis.com/css?family=Inter:400,400i,700,700i,600,600i,500,500i&subset=latin,latin-ext&display=auto"
+  ],
+  "sections": [
+    {
+      "classes": "x-grid e22854-e1 mhmu-0 mhmu-1 mhmu-2 mhmu-3 home_slide_section",
+      "bg": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "text": "SlideTeknolojiyi  ÖzgürleştirinPardus ile Geleceğe Adım AtınHerkes için açık milli işletim sistemimiz Pardus ile özgür ve güvenli teknolojiyle tanışın. Pardus'un masaüstü, sunucu ve gömülü sistemler i"
+    },
+    {
+      "classes": "n2-section-smartslider fitvidsignore n2_clear",
+      "bg": "rgba(0, 0, 0, 0)",
+      "padding": "0px",
+      "text": "SlideTeknolojiyi  ÖzgürleştirinPardus ile Geleceğe Adım AtınHerkes için açık milli işletim sistemimiz Pardus ile özgür ve güvenli teknolojiyle tanışın. Pardus'un masaüstü, sunucu ve gömülü sistemler i"
+    },
+    {
+      "classes": "n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-5fKCrQxqxnFQ-inner",
+      "bg": "rgba(0, 0, 0, 0)",
+      "padding": "10px",
+      "text": "Teknolojiyi  ÖzgürleştirinPardus ile Geleceğe Adım AtınHerkes için açık milli işletim sistemimiz Pardus ile özgür ve güvenli teknolojiyle tanışın. Pardus'un masaüstü, sunucu ve gömülü sistemler için s"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Hemen Başla",
+      "bg": "rgb(255, 203, 8)",
+      "color": "rgb(255, 203, 8)",
+      "borderRadius": "100px",
+      "padding": "0px",
+      "fontSize": "14px"
+    },
+    {
+      "text": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 203, 8)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "fontSize": "14px"
+    },
+    {
+      "text": "Tümü",
+      "bg": "rgb(255, 203, 8)",
+      "color": "rgb(255, 255, 255)",
+      "borderRadius": "99px",
+      "padding": "12px 30px",
+      "fontSize": "14px"
+    },
+    {
+      "text": "Röportajlar",
+      "bg": "rgba(255, 255, 255, 0)",
+      "color": "rgb(35, 31, 32)",
+      "borderRadius": "0px",
+      "padding": "12px 30px",
+      "fontSize": "14px"
+    },
+    {
+      "text": "Duyurular",
+      "bg": "rgba(255, 255, 255, 0)",
+      "color": "rgb(35, 31, 32)",
+      "borderRadius": "0px",
+      "padding": "12px 30px",
+      "fontSize": "14px"
+    },
+    {
+      "text": "Haberler",
+      "bg": "rgba(255, 255, 255, 0)",
+      "color": "rgb(35, 31, 32)",
+      "borderRadius": "0px",
+      "padding": "12px 30px",
+      "fontSize": "14px"
+    },
+    {
+      "text": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgba(35, 31, 32, 0.5)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "fontSize": "14px"
+    },
+    {
+      "text": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 203, 8)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "fontSize": "14px"
+    },
+    {
+      "text": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 203, 8)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "fontSize": "14px"
+    },
+    {
+      "text": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 203, 8)",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "fontSize": "14px"
+    }
+  ],
+  "nav": {
+    "classes": "x-masthead",
+    "html": "<header class=\"x-masthead\" role=\"banner\"><div class=\"x-grid e22886-e1 mhnq-0\"><div class=\"x-cell e22886-e2 mhnq-1 mhnq-2\"></div><div class=\"x-cell e22886-e3 mhnq-2 mhnq-3 mhnq-4 mhnq-5\"><a class=\"x-image e22886-e4 mhnq-d mhnq-e mhnq-f mhnq-g\" href=\"/\"><img data-lazyloaded=\"1\" src=\"https://pardus.org.tr/wp-content/uploads/2024/05/pardus-white-logo.svg\" data-src=\"https://pardus.org.tr/wp-content/uploads/2024/05/pardus-white-logo.svg\" width=\"161\" height=\"52\" alt=\"Image\" data-ll-status=\"loaded\" class=\"entered litespeed-loaded\"></a></div><div class=\"x-cell x-hide-md x-hide-sm x-hide-xs e22886-e5 mhnq-2 mhnq-4 mhnq-5 mhnq-6 mhnq-7 mhnq-8\"><ul id=\"menu01\" class=\"x-menu-first-level x-menu x-menu-inline e22886-e6 mhnq-j mhnq-k mhnq-m\" data-x-hoverintent=\"{&quot;interval&quot;:25,&quot;timeout&quot;:100,&quot;sensitivity&quot;:9}\"><li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22901\" id=\"menu-item-22901\"><a class=\"x-anchor x-anchor-menu-item mhnq-n mhnq-o mhnq-p mhnq-q mhnq-r mhnq-s mhnq-t mhnq-u mhnq-v mhnq-w mhnq-x mhnq-y mhnq-z\" tabindex=\"0\" href=\"javascript:void(0)\"><div class=\"x-anchor-content\"><div class=\"x-anchor-text\"><span class=\"x-anchor-text-primary\">Kurumsal</span></div><i class=\"x-anchor-sub-indicator\" data-x-skip-scroll=\"true\" aria-hidden=\"true\" data-x-icon-s=\"\"></i></div></a><ul class=\"sub-menu x-dropdown\" data-x-depth=\"0\" data-x-stem=\"dr\" data-x-stem-menu-top=\"\"><li class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-23386\" id=\"menu-item-23386\"><a class=\"x-anchor x-anchor-menu-item has-graphic mhnq-n mhnq-o mhnq-p mhnq-q mhnq-u mhnq-v mhnq-w mhnq-x mhnq-10 mhnq-11 mhnq-12 mhnq-13 mhnq-14 mhnq-15 mhnq-16 mhnq-17\" tabindex=\"0\" href=\"https://pardus.org.tr/hakkimizda/\"><div class=\"x-anchor-content\"><span class=\"x-graphic\" aria-hidden=\"true\"><span class=\"x-image x-graphic-child x-graphic-image x-graphic-primary\"><img data-lazyloaded=\"1\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI2IDI2Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojY2ZkNGRiO2ZpbGwtb3BhY2l0eTogMC4xOyIvPjwvc3ZnPg==\" data-src=\"/wp-content/uploads/2024/09/menu_icon.png\" width=\"26\" height=\"26\" alt=\"Image\"></span><span class=\"x-image x-graphic-child x-graphic-image x-graphic-secondary\"><img data-lazyloaded=\"1\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI2IDI2Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojY2ZkNGRiO2ZpbGwtb3BhY2l0eTogMC4xOyIvPjwvc3ZnPg==\" data-src=\"/wp-content/uploads/2024/09/menu_icon_hov.png\" width=\"26\" height=\"26\" alt=\"Image\"></span></span><div class=\"x-anchor-text\"><span class=\"x-anchor-text-primary\">Hakkımızda</span></div></div></a></li><li class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-23057\" id=\"menu-item-23057\"><a class=\"x-anchor x-anchor-menu-item has"
+  },
+  "pageStructure": [
+    "<div class=\"x-site site\"> — KurumsalHakkımızdaTarihçeVizyonPardus EtkinlikleriDuyurularHaberlerPardus Bülten",
+    "<span class=\"x-scroll-top left fade in\"> — "
+  ],
+  "images": [
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/pardus-white-logo.svg",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/search.png",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/download-1.png",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/12/slider_bg_webp-3.webp",
+      "alt": ""
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/slider2/button.svg",
+      "alt": ""
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/06/logo_ziraat.png",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/09/sbb-logo.png",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/09/meb-slider-logo-e1727075778369.webp",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2025/09/diyanet-new-v2-e1757941786689.webp",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/fav.png",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/ozelpaket_icon.svg",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/indirme_icon.svg",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/performans_icon.svg",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/right_arrow.svg",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/uygulama_icon.svg",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/guvenilir_icon.svg",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/right-arrow-light.svg",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/etap_icon.svg",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/fav.png",
+      "alt": "Image"
+    },
+    {
+      "src": "https://pardus.org.tr/wp-content/uploads/2024/05/post-arrow.svg",
+      "alt": "Image"
+    }
+  ]
+}

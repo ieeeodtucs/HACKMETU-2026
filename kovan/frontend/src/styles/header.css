@@ -1,0 +1,144 @@
+/* ═══ Header — Dark Pardus Bar ═══ */
+.hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  padding: 0 20px;
+  background: var(--hdr-bg);
+  border-bottom: 2px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.hdr-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hdr-brand img {
+  height: 32px;
+}
+
+.hdr-brand svg { color: var(--accent); }
+
+.hdr-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hdr-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.hdr-kv {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+}
+
+.hdr-k {
+  font-size: 11px;
+  color: rgba(250, 251, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hdr-v {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--mono);
+  color: var(--hdr-tx);
+}
+
+.hdr-v.green { color: #34d399; }
+.hdr-v.red   { color: #f87171; }
+
+.hdr-sep {
+  width: 1px;
+  height: 20px;
+  background: var(--hdr-border);
+}
+
+/* ═══ Header User Section ═══ */
+.hdr-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hdr-username {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: rgba(250, 251, 255, 0.7);
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+}
+
+.hdr-admin-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(255, 203, 8, 0.15);
+  border: 1px solid rgba(255, 203, 8, 0.3);
+  border-radius: var(--radius);
+  color: var(--accent);
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.hdr-admin-btn:hover {
+  background: rgba(255, 203, 8, 0.25);
+}
+
+.hdr-logout {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  color: rgba(250, 251, 255, 0.7);
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.hdr-logout:hover {
+  background: rgba(248, 113, 113, 0.15);
+  border-color: rgba(248, 113, 113, 0.3);
+  color: #f87171;
+}
+
+.hdr-settings-btn {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: rgba(250, 251, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.hdr-settings-btn:hover {
+  color: var(--fg);
+  background: rgba(255, 255, 255, 0.06);
+}

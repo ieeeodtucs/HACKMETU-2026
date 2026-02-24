@@ -1,0 +1,206 @@
+/* ===== Keylogger Drawer ===== */
+
+.keylog-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.keylog-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.keylog-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 82, 82, 0.08);
+  border-bottom: 1px solid rgba(255, 82, 82, 0.15);
+  color: #ff5252;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.keylog-error svg { flex-shrink: 0; margin-top: 1px; }
+
+.keylog-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+
+/* ── Empty / Waiting states ── */
+.keylog-empty,
+.keylog-waiting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 80px 20px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+}
+
+.keylog-empty > svg,
+.keylog-waiting > svg {
+  opacity: 0.35;
+}
+
+.keylog-empty-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.22);
+  max-width: 320px;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* ── Keylog groups (per window) ── */
+.keylog-group {
+  margin-bottom: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s;
+}
+.keylog-group:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.keylog-group:last-child {
+  margin-bottom: 0;
+}
+
+.keylog-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 12px;
+}
+
+.keylog-window-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #4fc3f7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.keylog-window-name svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.keylog-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+.keylog-time svg { opacity: 0.6; }
+
+/* ── Key text rendering ── */
+.keylog-text {
+  padding: 14px 14px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 2.1;
+  word-break: break-all;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Normal typed characters */
+.keylog-chars {
+  color: #4ade80;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+/* Special key badges */
+.keylog-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  margin: 1px 3px;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: 0.3px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: middle;
+  line-height: 1.6;
+}
+
+.keylog-badge-enter {
+  background: rgba(76, 175, 80, 0.15);
+  color: #81c784;
+  border-color: rgba(76, 175, 80, 0.25);
+}
+.keylog-badge-enter::after {
+  content: " ↵";
+  font-size: 10px;
+}
+
+.keylog-badge-del {
+  background: rgba(255, 82, 82, 0.12);
+  color: #ef5350;
+  border-color: rgba(255, 82, 82, 0.2);
+}
+.keylog-badge-del::after {
+  content: " ←";
+  font-size: 10px;
+}
+
+/* ── Toolbar info ── */
+.keylog-toolbar-info {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.keylog-count {
+  font-size: 12px;
+  color: #4fc3f7;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+/* ── Clear button ── */
+.keylog-clear-btn {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.keylog-clear-btn:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ── Trigger button styling ── */
+.mc-scan-trigger.keylog-trigger .mc-scan-trigger-icon {
+  color: #ff9100;
+}

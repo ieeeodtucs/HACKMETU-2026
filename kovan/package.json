@@ -1,0 +1,18 @@
+{
+  "name": "kovan",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @kovan/server dev",
+    "dev:frontend": "pnpm --filter @kovan/frontend dev",
+    "build": "pnpm --filter @kovan/frontend build",
+    "test": "pnpm --filter @kovan/server test",
+    "start": "pnpm --filter @kovan/server start",
+    "clean": "rm -rf node_modules server/node_modules frontend/node_modules shared/node_modules",
+    "deploy:agent": "git pull && cd client-go && GOOS=linux GOARCH=amd64 go build -ldflags='-s -w' -o pardus-agent . && ./pardus-agent --server wss://pardusc2-demo.bayburt.lu/ws/agent",
+    "deploy:agent:install": "git pull && cd client-go && GOOS=linux GOARCH=amd64 go build -ldflags='-s -w' -o pardus-agent . && sudo ./pardus-agent install --server wss://pardusc2-demo.bayburt.lu/ws/agent"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.2"
+  }
+}

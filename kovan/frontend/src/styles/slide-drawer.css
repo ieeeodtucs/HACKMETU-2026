@@ -1,0 +1,257 @@
+/* ═══════════════════════════════════════════════════
+   SLIDE-OUT DRAWER (Right Side Panel)
+   ═══════════════════════════════════════════════════ */
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 900;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 600px;
+  max-width: 90vw;
+  background: var(--bg-1);
+  border-left: 1px solid var(--border);
+  z-index: 910;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.25);
+}
+.drawer-panel.open {
+  transform: translateX(0);
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-0);
+  flex-shrink: 0;
+}
+
+.drawer-header-l {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--tx-1);
+}
+
+.drawer-header-l svg {
+  flex-shrink: 0;
+}
+
+.drawer-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-1);
+  color: var(--tx-2);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.drawer-close:hover {
+  background: var(--bg-2);
+  color: var(--tx-1);
+  border-color: var(--accent);
+}
+
+.drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+/* ─── Trigger buttons in control panel ─── */
+
+.mc-scan-triggers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 1200px) {
+  .mc-scan-triggers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .mc-scan-triggers {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mc-scan-trigger {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg-0);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.mc-scan-trigger:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.mc-scan-trigger:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.mc-scan-trigger:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.mc-scan-trigger-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.mc-scan-trigger-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.mc-scan-trigger-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tx-1);
+}
+
+.mc-scan-trigger-desc {
+  font-size: 10px;
+  color: var(--tx-3);
+}
+
+.mc-scan-trigger-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Vuln trigger */
+.mc-scan-trigger.vuln-trigger {
+  border-color: rgba(255, 109, 0, 0.15);
+}
+.mc-scan-trigger.vuln-trigger:hover:not(:disabled) {
+  border-color: rgba(255, 109, 0, 0.4);
+  box-shadow: 0 4px 16px rgba(255, 109, 0, 0.08);
+}
+.mc-scan-trigger.vuln-trigger .mc-scan-trigger-icon {
+  color: #ff6d00;
+  background: rgba(255, 109, 0, 0.06);
+  border: 1px solid rgba(255, 109, 0, 0.15);
+}
+
+/* Network trigger */
+.mc-scan-trigger.net-trigger {
+  border-color: rgba(124, 77, 255, 0.15);
+}
+.mc-scan-trigger.net-trigger:hover:not(:disabled) {
+  border-color: rgba(124, 77, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(124, 77, 255, 0.08);
+}
+.mc-scan-trigger.net-trigger .mc-scan-trigger-icon {
+  color: #7c4dff;
+  background: rgba(124, 77, 255, 0.06);
+  border: 1px solid rgba(124, 77, 255, 0.15);
+}
+
+/* Log trigger */
+.mc-scan-trigger.log-trigger {
+  border-color: rgba(255, 203, 8, 0.15);
+}
+.mc-scan-trigger.log-trigger:hover:not(:disabled) {
+  border-color: rgba(255, 203, 8, 0.4);
+  box-shadow: 0 4px 16px rgba(255, 203, 8, 0.08);
+}
+.mc-scan-trigger.log-trigger .mc-scan-trigger-icon {
+  color: var(--accent);
+  background: rgba(255, 203, 8, 0.06);
+  border: 1px solid rgba(255, 203, 8, 0.15);
+}
+
+/* ─── Drawer-internal vuln/net panels (always expanded, no collapse header) ─── */
+
+.drawer-body .vuln-panel,
+.drawer-body .net-panel {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  background: transparent;
+}
+
+.drawer-body .vuln-panel .vuln-header,
+.drawer-body .net-panel .net-header {
+  display: none;
+}
+
+.drawer-body .vuln-body,
+.drawer-body .net-body {
+  max-height: none;
+}
+
+/* Drawer scan action bar */
+.drawer-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-0);
+  flex-shrink: 0;
+}
+
+.drawer-action-bar-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--tx-3);
+}
+
+.drawer-action-bar-info .vuln-badge,
+.drawer-action-bar-info .net-badge {
+  margin-left: 4px;
+}
