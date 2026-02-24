@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OperationScore — Cihaz Detayı">
+    <title>OperationScore — Cihaz Detayı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="header__title"><span>OperationScore</span> — <span id="headerHostname">Cihaz Detayı</span></h1>
+        <div class="header__actions">
+            <label class="demo-toggle">
+                <span class="demo-toggle__label">Demo Modu</span>
+                <input type="checkbox" id="demoToggle" onchange="setDemoMode(this.checked)">
+                <span class="demo-toggle__slider"></span>
+                <span class="demo-toggle__state" id="demoLabel">Kapalı</span>
+            </label>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="app">
+            <!-- Rendered by app.js -->
+        </div>
+    </main>
+
+    <script>
+        // === Configuration ===
+        window.API_BASE = "http://127.0.0.1:8000";
+    </script>
+    <script src="app.js"></script>
+    <script>
+        // Read hostname from query string
+        var params = new URLSearchParams(window.location.search);
+        var hostname = params.get("hostname") || "";
+
+        // Update page title dynamically
+        if (hostname) {
+            document.title = hostname + " Detay — OperationScore";
+            var hEl = document.getElementById("headerHostname");
+            if (hEl) hEl.textContent = hostname + " Detay";
+        }
+
+        window._afterFetch = function (data) { renderDevice(data, hostname); };
+
+        if (!hostname) {
+            renderDevice(null, "");
+        } else {
+            fetchSnapshot().then(function (data) {
+                if (data) renderDevice(data, hostname);
+            });
+            connectWebSocket();
+        }
+    </script>
+
+</body>
+
+</html>

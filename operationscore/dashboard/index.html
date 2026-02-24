@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OperationScore — Güvenlik Paneli">
+  <title>OperationScore — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1 class="header__title"><span>OperationScore</span></h1>
+    <div class="header__actions">
+      <span class="text-muted text-sm" id="headerLastData">Son veri: —</span>
+      <span class="scan-progress-pill" id="scanProgressPill" style="display:none"></span>
+      <button class="btn btn--scan" id="btnScanGlobal">🔍 Taramayı Başlat</button>
+    </div>
+  </header>
+
+  <nav class="tab-nav" id="tabNav">
+    <button class="tab-nav__item tab-nav__item--active" data-tab="cihazlar">Cihazlar</button>
+    <button class="tab-nav__item" data-tab="analiz">Analiz</button>
+    <button class="tab-nav__item" data-tab="metodoloji">Metodoloji</button>
+  </nav>
+
+  <main class="container">
+    <div id="scan-status"></div>
+    <div id="app">
+      <!-- Rendered by app.js -->
+    </div>
+  </main>
+
+  <script>
+    // === Configuration ===
+    window.API_BASE = "http://127.0.0.1:8000";
+    // Set OPS_KEY via environment or override here. Fallback: "secret" (demo).
+    window.OPS_KEY = window.OPS_KEY || "secret";
+  </script>
+  <script src="app.js"></script>
+  <script>
+    // Boot the SPA
+    bootApp();
+  </script>
+
+</body>
+
+</html>
